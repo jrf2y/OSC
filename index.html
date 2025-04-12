@@ -106,9 +106,20 @@
             <a href="#" class="hover:text-red-400">Join the Movement</a>
         </div>
         <div class="md:hidden">
-            <i class="fas fa-bars text-2xl"></i>
+          <button id="menu-toggle" class="text-2xl focus:outline-none">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-gray-900 text-white px-6 py-4 space-y-4">
+      <a href="#" class="block trigger-modal hover:text-red-400">Our Story</a>
+      <a href="#" class="block trigger-modal hover:text-red-400">Products</a>
+      <a href="#" class="block trigger-modal hover:text-red-400">Testimonials</a>
+      <a href="#" class="block trigger-modal hover:text-red-400">Join the Movement</a>
+    </div>
+
 
     <!-- Hero Section -->
     <section class="hero rain-effect">
@@ -377,11 +388,11 @@
   </footer>
 
   <!-- Floating Button -->
-  <div class="fixed bottom-6 right-6">
-    <button class="cigarette bg-red-600 text-white rounded-full h-16 w-16 flex items-center justify-center shadow-lg hover:bg-red-700 transition duration-300">
+  <div class="fixed bottom-6 right-6 z-50">
+    <button id="floating-cig-btn" class="cigarette bg-red-600 text-white rounded-full h-16 w-16 flex items-center justify-center shadow-lg hover:bg-red-700 transition duration-300">
       <i class="fas fa-smoking text-2xl"></i>
     </button>
-  </div>
+  </div>  
 
 <!-- Modal -->
 <div id="popup-modal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-70 flex items-center justify-center">
@@ -431,13 +442,19 @@
 
   
       // Floating cigarette button still has its own alert
-      const cigaretteBtn = document.querySelector('.cigarette');
+      const cigaretteBtn = document.getElementById('floating-cig-btn');
       if (cigaretteBtn) {
         cigaretteBtn.addEventListener('click', function () {
-          alert("Congratulations! You've taken the first step toward standing awkwardly outside buildings.");
+          alert("Congratulations! You've taken the first step toward standing awkwardly outside buildings. Unfortunately, this button does nothing. This company is not real, unlike lung cancer.");
         });
       }
   
+  // Toggle mobile menu
+      document.getElementById('menu-toggle')?.addEventListener('click', function () {
+        const menu = document.getElementById('mobile-menu');
+        if (menu) menu.classList.toggle('hidden');
+      });
+
       // Testimonial animation
       document.querySelectorAll('.testimonial-card').forEach(card => {
         card.addEventListener('mouseenter', () => card.classList.add('wind-effect'));
