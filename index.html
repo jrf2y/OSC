@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outside Cigs™ - The Only Cigarettes Bold Enough to Be Smoked Outside</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/882/882974.png" />
+  <!-- Google Tag Placeholder -->
+  <script>
+    // Insert Google Analytics or Tag Manager code here
+  </script>
+  <style>
+    /* All your embedded CSS from original is kept */
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      position: relative;
+    }
+
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .title-font {
+      font-family: 'Archivo Black', sans-serif;
+    }
+
+    .cigarette {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .testimonial-card {
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .rain-effect {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .rain-effect::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><line x1="20" y1="0" x2="20" y2="20" stroke="white" stroke-width="1" opacity="0.3"/><line x1="40" y1="0" x2="40" y2="20" stroke="white" stroke-width="1" opacity="0.3"/><line x1="60" y1="0" x2="60" y2="20" stroke="white" stroke-width="1" opacity="0.3"/><line x1="80" y1="0" x2="80" y2="20" stroke="white" stroke-width="1" opacity="0.3"/></svg>');
+      opacity: 0.5;
+      animation: rain 1s linear infinite;
+      pointer-events: none; 
+    }
+
+    @keyframes rain {
+      0% { background-position: 0 0; }
+      100% { background-position: 0 20px; }
+    }
+
+    .wind-effect {
+      animation: wind 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes wind {
+      0% { transform: skewX(0deg); }
+      50% { transform: skewX(5deg); }
+      100% { transform: skewX(-5deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Everything from original content including nav, hero, features, testimonials, etc. goes here unchanged -->
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white py-4 px-6 flex justify-between items-center">
+        <div class="flex items-center">
+            <i class="fas fa-smoking text-red-500 text-2xl mr-2"></i>
+            <span class="title-font text-xl">OUTSIDE CIGS™</span>
+        </div>
+        <div class="hidden md:flex space-x-6">
+            <a href="#" class="hover:text-red-400">Our Story</a>
+            <a href="#" class="hover:text-red-400">Products</a>
+            <a href="#" class="hover:text-red-400">Testimonials</a>
+            <a href="#" class="hover:text-red-400">Join the Movement</a>
+        </div>
+        <div class="md:hidden">
+            <i class="fas fa-bars text-2xl"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero rain-effect">
+        <div class="hero-overlay h-full flex items-center justify-center">
+            <div class="text-center px-4">
+                <h1 class="title-font text-5xl md:text-7xl text-white mb-4 wind-effect">🚬 OUTSIDE CIGS™</h1>
+                <p class="text-xl md:text-2xl text-white mb-8">The only brand bold enough to take smoking... outside.</p>
+                <button class="trigger-modal bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">
+                    JOIN THE REVOLUTION
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="title-font text-3xl md:text-4xl mb-8">Welcome to the revolution.</h2>
+            <p class="text-lg md:text-xl mb-8">Tired of lighting up inside? So were we. That's why we started Outside Cigs - a lifestyle brand for the bold, the brave, and the legally compliant.</p>
+            <p class="text-lg md:text-xl mb-12">Whether you're behind a dumpster, in a freezing parking lot, or huddled under a leaky overhang during a torrential downpour... you're one of us now.</p>
+            
+            <div class="flex justify-center">
+                <div class="cigarette">
+                    <i class="fas fa-smoking text-gray-400 text-6xl"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 px-6 bg-gray-100">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="title-font text-3xl md:text-4xl mb-12 text-center">Why Outside Cigs™?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-red-500 text-4xl mb-4">
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+                    <h3 class="title-font text-xl mb-3">Weather-tested</h3>
+                    <p>Our cigs hold up in wind, rain, and judgmental glances.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-red-500 text-4xl mb-4">
+                        <i class="fas fa-user-slash"></i>
+                    </div>
+                    <h3 class="title-font text-xl mb-3">Socially isolating</h3>
+                    <p>Experience the thrill of being 30 feet from any door.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-red-500 text-4xl mb-4">
+                        <i class="fas fa-wine-glass-alt"></i>
+                    </div>
+                    <h3 class="title-font text-xl mb-3">Flavor notes</h3>
+                    <p>Asphalt. Regret. A hint of freedom.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-red-500 text-4xl mb-4">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h3 class="title-font text-xl mb-3">Certified Non-Inside™</h3>
+                    <p>Guaranteed to never be enjoyed indoors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Starter Kit Section -->
+    <section class="py-16 px-6 bg-gray-800 text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="title-font text-3xl md:text-4xl mb-12 text-center">Our Starter Kit Includes:</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Item 1 -->
+                <div class="bg-gray-700 p-6 rounded-lg border-l-4 border-red-500">
+                    <div class="text-red-400 text-4xl mb-4">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3 class="title-font text-xl mb-3">A crumpled pack</h3>
+                    <p>With one bent cig left (because you "just had one" five minutes ago)</p>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="bg-gray-700 p-6 rounded-lg border-l-4 border-red-500">
+                    <div class="text-red-400 text-4xl mb-4">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="title-font text-xl mb-3">A borrowed lighter</h3>
+                    <p>That only works if you whisper to it</p>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="bg-gray-700 p-6 rounded-lg border-l-4 border-red-500">
+                    <div class="text-red-400 text-4xl mb-4">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="title-font text-xl mb-3">Spotify playlist</h3>
+                    <p>Titled "Nicotine & Existentialism"</p>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="bg-gray-700 p-6 rounded-lg border-l-4 border-red-500">
+                    <div class="text-red-400 text-4xl mb-4">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3 class="title-font text-xl mb-3">Bonus</h3>
+                    <p>Cold fingers and fleeting friendships</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button class="trigger-modal bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">
+                    ORDER YOUR STARTER KIT NOW
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="title-font text-3xl md:text-4xl mb-12 text-center">What People Are Saying</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 text-white rounded-full h-12 w-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="title-font">Chad</h4>
+                            <p class="text-sm text-gray-600">Vaper-Turned-Visionary</p>
+                        </div>
+                    </div>
+                    <p class="italic">"I met the love of my life behind a 7/11. Thanks, Outside Cigs."</p>
+                    <div class="mt-4 text-red-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 text-white rounded-full h-12 w-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="title-font">Sam</h4>
+                            <p class="text-sm text-gray-600">Former Inside Smoker</p>
+                        </div>
+                    </div>
+                    <p class="italic">"Never before have I felt so judged and yet so alive."</p>
+                    <div class="mt-4 text-red-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 text-white rounded-full h-12 w-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <div>
+                            <h4 class="title-font">IRS Audit</h4>
+                            <p class="text-sm text-gray-600">2025</p>
+                        </div>
+                    </div>
+                    <p class="italic">"Technically, it's not even a company. It's just a vibe."</p>
+                    <div class="mt-4 text-red-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-question-circle" title="We're still assessing the tax implications"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-6 bg-gray-900 text-white text-center rain-effect">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="title-font text-3xl md:text-5xl mb-8">Join the Movement</h2>
+            <p class="text-xl mb-8">Outside Cigs isn't a brand. It's a lifestyle. A very cold, slightly damp lifestyle.</p>
+            <p class="text-xl mb-12">See you at the ashtray.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <button class="trigger-modal bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 mb-4 md:mb-0">
+                    BUY NOW
+                </button>
+                <button class="trigger-modal bg-transparent hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full text-lg border-2 border-white transition duration-300 transform hover:scale-105">
+                    LEARN MORE
+                </button>
+            </div>
+        </div>
+    </section>
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Column 1 -->
+            <div>
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-smoking text-red-500 text-2xl mr-2"></i>
+                    <span class="title-font text-xl text-white">OUTSIDE CIGS™</span>
+                </div>
+                <p>The only brand bold enough to take smoking... outside.</p>
+            </div>
+            
+            <!-- Column 2 -->
+            <div>
+                <h4 class="title-font text-white text-lg mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="trigger-modal hover:text-white">About Us</a></li>
+                    <li><a href="#" class="trigger-modal hover:text-white">Products</a></li>
+                    <li><a href="#" class="trigger-modal hover:text-white">Testimonials</a></li>
+                    <li><a href="#" class="trigger-modal hover:text-white">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3 -->
+            <div>
+                <h4 class="title-font text-white text-lg mb-4">Legal</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="trigger-modal hover:text-white">Terms of Service</a></li>
+                    <li><a href="#" class="trigger-modal hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="trigger-modal hover:text-white">Non-Inside™ Guarantee</a></li>
+                    <li><a href="#" class="trigger-modal hover:text-white">Smoke at Your Own Risk</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 4 -->
+            <div>
+                <h4 class="title-font text-white text-lg mb-4">Connect</h4>
+                <div class="flex space-x-4 mb-4">
+                    <a href="#" class="trigger-modal text-gray-400 hover:text-white text-2xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="trigger-modal text-gray-400 hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="trigger-modal text-gray-400 hover:text-white text-2xl"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="trigger-modal text-gray-400 hover:text-white text-2xl"><i class="fab fa-reddit"></i></a>
+                </div>
+                <p>#OutsideCigs</p>
+                <p>#NonInsideLiving</p>
+            </div>
+        </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p>© 2025 Outside Cigs™. Not actually a real company. Please don't smoke.</p>
+        <p class="mt-2 text-sm">(But if you do, please do it outside.)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Button -->
+  <div class="fixed bottom-6 right-6">
+    <button class="cigarette bg-red-600 text-white rounded-full h-16 w-16 flex items-center justify-center shadow-lg hover:bg-red-700 transition duration-300">
+      <i class="fas fa-smoking text-2xl"></i>
+    </button>
+  </div>
+
+<!-- Modal -->
+<div id="popup-modal" class="fixed inset-0 hidden z-50 bg-black bg-opacity-70 flex items-center justify-center">
+    <div class="bg-white rounded-lg p-6 max-w-sm w-full text-center shadow-xl">
+      <h3 class="text-lg font-bold mb-4">Hold Up!</h3>
+      <p class="mb-4">Not actually a real company. Please don't smoke.<br>(But if you do, please do it outside.)</p>
+      <button id="modal-close-btn" class="mt-2 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">Got it</button>
+    </div>
+</div>
+  
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('popup-modal');
+  
+      // Delegated close button
+      document.body.addEventListener('click', function (e) {
+        if (e.target.matches('#modal-close-btn')) {
+          modal.classList.add('hidden');
+        }
+      });
+  
+      const showModal = () => modal.classList.remove('hidden');
+  
+      // Trigger modal on external <a> tags
+      document.querySelectorAll('a[href]').forEach(el => {
+        const href = el.getAttribute('href') || '';
+        const isInternal = href.startsWith('#');
+        const isMailto = href.startsWith('mailto:');
+        const isTel = href.startsWith('tel:');
+        if (!isMailto && !isTel) {
+          el.addEventListener('click', function (e) {
+            e.preventDefault();
+            showModal();
+          });
+        }
+      });
+  
+    // Trigger modal on buttons with .trigger-modal using event delegation
+      document.body.addEventListener('click', function (e) {
+        const btn = e.target.closest('button.trigger-modal');
+        if (btn) {
+          e.preventDefault();
+          showModal();
+        }
+      });
+
+  
+      // Floating cigarette button still has its own alert
+      const cigaretteBtn = document.querySelector('.cigarette');
+      if (cigaretteBtn) {
+        cigaretteBtn.addEventListener('click', function () {
+          alert("Congratulations! You've taken the first step toward standing awkwardly outside buildings.");
+        });
+      }
+  
+      // Testimonial animation
+      document.querySelectorAll('.testimonial-card').forEach(card => {
+        card.addEventListener('mouseenter', () => card.classList.add('wind-effect'));
+        card.addEventListener('mouseleave', () => card.classList.remove('wind-effect'));
+      });
+    });
+  </script>
+  
+  
+  
+</body>
+</html>
